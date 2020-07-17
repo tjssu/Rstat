@@ -1,0 +1,15 @@
+Package: Rstat
+Title: Basic Statistical Methods in R
+Version: 0.0.0.1
+Authors@R: person("T.J.", "Lim", email = "tjlim@ssu.ac.kr", role = c("aut", "cre"))
+Description: To show and to visualize basic statistical results.
+Depends: R (>= 3.4.4)
+License: MIT
+LazyData: true
+RoxygenNote: 6.0.1
+Author: T.J. Lim [aut, cre]
+Maintainer: T.J. Lim <tjlim@ssu.ac.kr>
+Built: R 3.4.4; ; 2019-02-11 07:59:11 UTC; windows
+RemoteType: local
+RemoteUrl: E:\R-stat\test\Rstat
+RemoteSha: 0.0.0.1

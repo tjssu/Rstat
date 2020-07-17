@@ -1,0 +1,6 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+#Github stuffs
+.gitignore
+RAEDME.md
+.Rhistory

@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Simulate the Confidence Interval for a Ratio</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for ciprob.sim {Rstat}"><tr><td>ciprob.sim {Rstat}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Simulate the Confidence Interval for a Ratio</h2>
+
+<h3>Description</h3>
+
+<p>Simulate the Confidence Interval for a Population Ratio
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+ciprob.sim(n, p = 0.5, alp = 0.05, N = 100, seed = 9857, dig = 4,
+  plot = TRUE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>n</code></td>
+<td>
+<p>Sample size</p>
+</td></tr>
+<tr valign="top"><td><code>p</code></td>
+<td>
+<p>Population ratio value, Default: 0.5</p>
+</td></tr>
+<tr valign="top"><td><code>alp</code></td>
+<td>
+<p>Level of significance, Default: 0.05</p>
+</td></tr>
+<tr valign="top"><td><code>seed</code></td>
+<td>
+<p>Seed value for generating random numbers, Default: 9857</p>
+</td></tr>
+<tr valign="top"><td><code>dig</code></td>
+<td>
+<p>Number of digits below the decimal point, Default: 4</p>
+</td></tr>
+<tr valign="top"><td><code>plot</code></td>
+<td>
+<p>Plot confidence intervals? Default: TRUE</p>
+</td></tr>
+<tr valign="top"><td><code>n</code></td>
+<td>
+<p>Sample size, Default: 100</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>None.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+ciprob.sim(n=16, p=0.6, alp=0.05, N=100)
+ciprob.sim(n=16, p=0.6, alp=0.05, N=10000, plot=FALSE)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>Rstat</em> version 0.0.0.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

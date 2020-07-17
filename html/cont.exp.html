@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Expected Values of Continuous Random Variables</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for cont.exp {Rstat}"><tr><td>cont.exp {Rstat}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Expected Values of Continuous Random Variables</h2>
+
+<h3>Description</h3>
+
+<p>Expected Values of Continuous Random Variables
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+cont.exp(FUN, lo, up, mt, dig = 3, xn = "X", prt = FALSE, plot = FALSE,
+  pos = "center")
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>FUN</code></td>
+<td>
+<p>Continuous probability density function</p>
+</td></tr>
+<tr valign="top"><td><code>lo</code></td>
+<td>
+<p>Lower limit of x-axis</p>
+</td></tr>
+<tr valign="top"><td><code>up</code></td>
+<td>
+<p>Upper limit of x-axis</p>
+</td></tr>
+<tr valign="top"><td><code>mt</code></td>
+<td>
+<p>Graph title</p>
+</td></tr>
+<tr valign="top"><td><code>dig</code></td>
+<td>
+<p>Number of digits below the decimal point, Default: 3</p>
+</td></tr>
+<tr valign="top"><td><code>xn</code></td>
+<td>
+<p>Random variable name, Default: 'X'</p>
+</td></tr>
+<tr valign="top"><td><code>prt</code></td>
+<td>
+<p>Print expected values and variances? Default: FALSE</p>
+</td></tr>
+<tr valign="top"><td><code>plot</code></td>
+<td>
+<p>Plot probability density function? Default: FALSE</p>
+</td></tr>
+<tr valign="top"><td><code>pos</code></td>
+<td>
+<p>Legend location, Default: 'center'</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>list(ev=Ex, std=Dx)
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+fx = function(x) dnorm(x,10,2)
+cont.exp(fx, 0, 20, prt=T, plot=T)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>Rstat</em> version 0.0.0.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

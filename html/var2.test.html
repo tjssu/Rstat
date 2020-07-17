@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Hypothesis Test for Two Population Variances</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for var2.test {Rstat}"><tr><td>var2.test {Rstat}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Hypothesis Test for Two Population Variances</h2>
+
+<h3>Description</h3>
+
+<p>Hypothesis Test for Two Normal Population Variances
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+var2.test(s1, s2, n1, n2, alp = 0.05, side = "two", dig = 4)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>s1</code></td>
+<td>
+<p>Sample standard deviation of population1</p>
+</td></tr>
+<tr valign="top"><td><code>s2</code></td>
+<td>
+<p>Sample standard deviation of population2</p>
+</td></tr>
+<tr valign="top"><td><code>n1</code></td>
+<td>
+<p>Sample size of population1</p>
+</td></tr>
+<tr valign="top"><td><code>n2</code></td>
+<td>
+<p>Sample size of population2</p>
+</td></tr>
+<tr valign="top"><td><code>alp</code></td>
+<td>
+<p>Level of significance, Default: 0.05</p>
+</td></tr>
+<tr valign="top"><td><code>side</code></td>
+<td>
+<p>Type of the alternative hypothesis, Default: 'two'</p>
+</td></tr>
+<tr valign="top"><td><code>dig</code></td>
+<td>
+<p>Number of digits below the decimal point, Default: 4</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>Test Statistic (F0) and the p-value (pv)
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+var2.test(s1=3.5, s2=5.8, n1=25, n2=34)
+
+x = rnorm(20, 199, 4)
+y = rnorm(25, 200, 2)
+var2.test(sd(x), sd(y), length(x), length(y), side="up")
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>Rstat</em> version 0.0.0.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

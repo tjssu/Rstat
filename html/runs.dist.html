@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Distribution of Runs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for runs.dist {Rstat}"><tr><td>runs.dist {Rstat}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Distribution of Runs</h2>
+
+<h3>Description</h3>
+
+<p>Distribution of Runs Test Statistic
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+runs.dist(n1 = 2:20, n2 = 2:20, alp = 0.05, tab = TRUE, side = "two",
+  plot = FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>n1</code></td>
+<td>
+<p>Number of data in group 1, Default: 2:20</p>
+</td></tr>
+<tr valign="top"><td><code>n2</code></td>
+<td>
+<p>Number of data in group 2, Default: 2:20</p>
+</td></tr>
+<tr valign="top"><td><code>alp</code></td>
+<td>
+<p>Level of significance, Default: 0.05</p>
+</td></tr>
+<tr valign="top"><td><code>tab</code></td>
+<td>
+<p>Print critical value table? Default: TRUE</p>
+</td></tr>
+<tr valign="top"><td><code>side</code></td>
+<td>
+<p>Type of alternative hypothesis, Default: 'two'</p>
+</td></tr>
+<tr valign="top"><td><code>plot</code></td>
+<td>
+<p>Plot run distribution? Default: FALSE</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>None.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+require(randomizeBE)
+runs.dist(n1=2:10, n2=2:10)
+runs.dist(n1=c(5,20), n2=c(5,20), tab=FALSE, plot=TRUE)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>Rstat</em> version 0.0.0.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

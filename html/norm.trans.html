@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Standardization of the Normal Distribution</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for norm.trans {Rstat}"><tr><td>norm.trans {Rstat}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Standardization of the Normal Distribution</h2>
+
+<h3>Description</h3>
+
+<p>Check Probability Conservation in Standardizing the Normal Distribution
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+norm.trans(mu, sig, a, b, mt1, mt0, dig = 4, span = 3, np = 100)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>mu</code></td>
+<td>
+<p>Mean of the normal distribution</p>
+</td></tr>
+<tr valign="top"><td><code>sig</code></td>
+<td>
+<p>Standard deviation of the normal distribution</p>
+</td></tr>
+<tr valign="top"><td><code>a</code></td>
+<td>
+<p>Lower limit of X for calculating probability P(a&lt;X&lt;b)</p>
+</td></tr>
+<tr valign="top"><td><code>b</code></td>
+<td>
+<p>Upper limit of X for calculating probability P(a&lt;X&lt;b)</p>
+</td></tr>
+<tr valign="top"><td><code>mt1</code></td>
+<td>
+<p>Title of the normal distribution probability plot</p>
+</td></tr>
+<tr valign="top"><td><code>mt0</code></td>
+<td>
+<p>Title of the standard normal distribution probability plot</p>
+</td></tr>
+<tr valign="top"><td><code>dig</code></td>
+<td>
+<p>Number of digits below the decimal point, Default: 4</p>
+</td></tr>
+<tr valign="top"><td><code>span</code></td>
+<td>
+<p>Range of x-axis in [mu-span*sig, mu+span*sig], Default: 3</p>
+</td></tr>
+<tr valign="top"><td><code>np</code></td>
+<td>
+<p>Number of plotting points, Default: 100</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>None.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+norm.trans(2, 2, -1, 4)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>Rstat</em> version 0.0.0.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

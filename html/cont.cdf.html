@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: CDF of a Continuous Random Variable</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for cont.cdf {Rstat}"><tr><td>cont.cdf {Rstat}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>CDF of a Continuous Random Variable</h2>
+
+<h3>Description</h3>
+
+<p>Cumulative Distribution Function of a Continuous Random Variable
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+cont.cdf(FUN, low, up, xs, mt, dig = 4, pos = "bottomright")
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>FUN</code></td>
+<td>
+<p>Probability density function</p>
+</td></tr>
+<tr valign="top"><td><code>low</code></td>
+<td>
+<p>Lower limit of x-axis</p>
+</td></tr>
+<tr valign="top"><td><code>up</code></td>
+<td>
+<p>Upper limit of x-axis</p>
+</td></tr>
+<tr valign="top"><td><code>xs</code></td>
+<td>
+<p>Specific values of X for displaying the probability</p>
+</td></tr>
+<tr valign="top"><td><code>mt</code></td>
+<td>
+<p>Graph Title of the CDF</p>
+</td></tr>
+<tr valign="top"><td><code>dig</code></td>
+<td>
+<p>Number of digits below the decimal point, Default: 4</p>
+</td></tr>
+<tr valign="top"><td><code>pos</code></td>
+<td>
+<p>Legend location, Default: 'bottomright'</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>None.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+pdf = function(x) 2*exp(-2*x)*(x&gt;0)
+cont.cdf(pdf, low=-1, up=3, xs=c((1:5)*0.2, 2))
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>Rstat</em> version 0.0.0.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Quantile Plot of the Standard Normal Distribution</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for snorm.quant {Rstat}"><tr><td>snorm.quant {Rstat}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Quantile Plot of the Standard Normal Distribution</h2>
+
+<h3>Description</h3>
+
+<p>Quantile Plot of the Standard Normal Distribution
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+snorm.quant(pv, pv2, mt, dig = 4)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>pv</code></td>
+<td>
+<p>Vector of probability values</p>
+</td></tr>
+<tr valign="top"><td><code>pv2</code></td>
+<td>
+<p>Vector of specific probability values</p>
+</td></tr>
+<tr valign="top"><td><code>mt</code></td>
+<td>
+<p>Graph title (default=&quot;Quantiles of the Standard Normal Distribution&quot;)</p>
+</td></tr>
+<tr valign="top"><td><code>dig</code></td>
+<td>
+<p>Number of digits below the decimal point, Default: 4</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>None.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+pv = c(0.005, 0.01, 0.025, 0.05, 1:9/10, 0.95, 0.975, 0.99, 0.995)
+snorm.quant(pv, pv)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>Rstat</em> version 0.0.0.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

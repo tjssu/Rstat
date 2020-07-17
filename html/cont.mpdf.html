@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: PDF and CDF for Continuous Random Variables</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for cont.mpdf {Rstat}"><tr><td>cont.mpdf {Rstat}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>PDF and CDF for Continuous Random Variables</h2>
+
+<h3>Description</h3>
+
+<p>PDF and CDF for Continuous Random Variables
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+cont.mpdf(dist, lo, up, para, para2, ymax, mt, dcol, np = 100,
+  pos1 = "topright", pos2 = "bottomright", xp1, xp2)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>dist</code></td>
+<td>
+<p>Name of continuous probability distribution (one of the follows)
+(&quot;exp&quot;, &quot;gamma&quot;, &quot;weibull&quot;, &quot;beta&quot;, &quot;norm&quot;, &quot;t&quot;, &quot;chisq&quot;, &quot;f&quot;)</p>
+</td></tr>
+<tr valign="top"><td><code>lo</code></td>
+<td>
+<p>Lower limit of x-axis</p>
+</td></tr>
+<tr valign="top"><td><code>up</code></td>
+<td>
+<p>Upper limit of x-axis</p>
+</td></tr>
+<tr valign="top"><td><code>para</code></td>
+<td>
+<p>First parameter vector of PDF</p>
+</td></tr>
+<tr valign="top"><td><code>para2</code></td>
+<td>
+<p>Second parameter vector of PDF (if necessary)</p>
+</td></tr>
+<tr valign="top"><td><code>ymax</code></td>
+<td>
+<p>Upper limit of y-axis</p>
+</td></tr>
+<tr valign="top"><td><code>mt</code></td>
+<td>
+<p>Graph title</p>
+</td></tr>
+<tr valign="top"><td><code>dcol</code></td>
+<td>
+<p>Graph color vector (default as follows)
+c(&quot;red&quot;, &quot;blue&quot;, &quot;orange2&quot;, &quot;green4&quot;, &quot;purple&quot;, &quot;cyan2&quot;)</p>
+</td></tr>
+<tr valign="top"><td><code>np</code></td>
+<td>
+<p>Number of plot points, Default: 100</p>
+</td></tr>
+<tr valign="top"><td><code>pos1</code></td>
+<td>
+<p>Legend location of PDF, Default: 'topright'</p>
+</td></tr>
+<tr valign="top"><td><code>pos2</code></td>
+<td>
+<p>Legend location of CDF, Default: 'bottomright'</p>
+</td></tr>
+<tr valign="top"><td><code>xp1</code></td>
+<td>
+<p>Vector of specific x values for PDF (ignore legend)</p>
+</td></tr>
+<tr valign="top"><td><code>xp2</code></td>
+<td>
+<p>Vector of specific x values for CDF (ignore legend)</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>None.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+lamb = 1:5
+cont.mpdf("exp", 0, 3, para=lamb, ymax=5)
+
+alp = c(0.5, 1, 2, 3); rate = 1
+cont.mpdf("gamma", 0, 8, para=alp, para2=rate, ymax=1.2)
+
+th = 1; alp = c(0.5, 1, 2, 3)
+cont.mpdf("weibull", 0, 5, para=alp, para2=th, ymax=1.2)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>Rstat</em> version 0.0.0.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

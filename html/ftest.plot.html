@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Plot the PDF of the F-test Statistic</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for ftest.plot {Rstat}"><tr><td>ftest.plot {Rstat}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Plot the PDF of the F-test Statistic</h2>
+
+<h3>Description</h3>
+
+<p>Plot the PDF of the F-test Statistic
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+ftest.plot(fstat, deg, pmax = 0.995, side = "two")
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>fstat</code></td>
+<td>
+<p>F-test statistic for the ratio of two population variances</p>
+</td></tr>
+<tr valign="top"><td><code>deg</code></td>
+<td>
+<p>Vector of degree of freedoms</p>
+</td></tr>
+<tr valign="top"><td><code>pmax</code></td>
+<td>
+<p>Maximum probability for quantiles in x-axis, Default: 0.995</p>
+</td></tr>
+<tr valign="top"><td><code>side</code></td>
+<td>
+<p>Type of the alternative hypothesis, Default: 'two'</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>None.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+vo = var.test(rnorm(20, 10, 2.4), rnorm(25, 12, 1.8))
+ftest.plot(fstat=vo$stat, deg=as.vector(vo$para), pmax=0.9999, side="two")
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>Rstat</em> version 0.0.0.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

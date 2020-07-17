@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Operating Characteristic Curves of the Test for a Mean</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for meanchar.plot {Rstat}"><tr><td>meanchar.plot {Rstat}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Operating Characteristic Curves of the Test for a Mean</h2>
+
+<h3>Description</h3>
+
+<p>Operating Characteristic Curves of the Test for a Population Mean
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+meanchar.plot(mu0, mu1, sig, nv, alp = 0.05, prng, side = "two", mt,
+  dig = 4)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>mu0</code></td>
+<td>
+<p>Population mean value under the null hypothesis</p>
+</td></tr>
+<tr valign="top"><td><code>mu1</code></td>
+<td>
+<p>Vector of population mean values for which the power should be calculated</p>
+</td></tr>
+<tr valign="top"><td><code>sig</code></td>
+<td>
+<p>Population standard deviation</p>
+</td></tr>
+<tr valign="top"><td><code>nv</code></td>
+<td>
+<p>Sample size vector</p>
+</td></tr>
+<tr valign="top"><td><code>alp</code></td>
+<td>
+<p>Level of significance, Default: 0.05</p>
+</td></tr>
+<tr valign="top"><td><code>prng</code></td>
+<td>
+<p>Range of x-axis</p>
+</td></tr>
+<tr valign="top"><td><code>side</code></td>
+<td>
+<p>Type of the alternative hypothesis (&quot;up&quot;, &quot;low&quot;, &quot;two&quot;), Default: 'two'</p>
+</td></tr>
+<tr valign="top"><td><code>mt</code></td>
+<td>
+<p>Graph title</p>
+</td></tr>
+<tr valign="top"><td><code>dig</code></td>
+<td>
+<p>Number of digits below the decimal point, Default: 4</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>None.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+n = c(10, 30, 50, 100)
+meanchar.plot(mu0=100, mu1=98, sig=5, nv=n, side="low")
+meanchar.plot(mu0=100, mu1=98, sig=5, nv=n, side="two")
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>Rstat</em> version 0.0.0.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

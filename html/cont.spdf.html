@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Plot PDF of Continuous Random Variables</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for cont.spdf {Rstat}"><tr><td>cont.spdf {Rstat}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Plot PDF of Continuous Random Variables</h2>
+
+<h3>Description</h3>
+
+<p>Plot (separately) the PDF of Continuous Random Variables
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+cont.spdf(dist, lo, up, para, para2, ymax, xl, yl, dcol, np = 100, xp)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>dist</code></td>
+<td>
+<p>Distribution name (&quot;exp&quot;, &quot;gamma&quot;, &quot;weibull&quot;, &quot;beta&quot;, &quot;norm&quot;, &quot;t&quot;, &quot;chisq&quot;, &quot;f&quot;)</p>
+</td></tr>
+<tr valign="top"><td><code>lo</code></td>
+<td>
+<p>Lower limit of x-axis</p>
+</td></tr>
+<tr valign="top"><td><code>up</code></td>
+<td>
+<p>Upper limit of x-axis</p>
+</td></tr>
+<tr valign="top"><td><code>para</code></td>
+<td>
+<p>First parameter vector of the distribution</p>
+</td></tr>
+<tr valign="top"><td><code>para2</code></td>
+<td>
+<p>Second parameter vector (except &quot;exp&quot;, &quot;t&quot;, &quot;chisq&quot;)</p>
+</td></tr>
+<tr valign="top"><td><code>ymax</code></td>
+<td>
+<p>Upper limit of y-axis</p>
+</td></tr>
+<tr valign="top"><td><code>xl</code></td>
+<td>
+<p>Label vector of x-axis</p>
+</td></tr>
+<tr valign="top"><td><code>yl</code></td>
+<td>
+<p>Label vector of y-axis</p>
+</td></tr>
+<tr valign="top"><td><code>dcol</code></td>
+<td>
+<p>Graph color vector</p>
+</td></tr>
+<tr valign="top"><td><code>np</code></td>
+<td>
+<p>Number of plot points, Default: 100</p>
+</td></tr>
+<tr valign="top"><td><code>xp</code></td>
+<td>
+<p>Location vector for vertical lines</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>None.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+mu = c(0,0,2,2)
+sig=c(1,2,1,2)
+cont.spdf("norm", -7, 7, mu, sig, xp=mu)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>Rstat</em> version 0.0.0.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

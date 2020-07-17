@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Plot the PDF of Test Statistic with the T-distribution</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for ttest.plot {Rstat}"><tr><td>ttest.plot {Rstat}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Plot the PDF of Test Statistic with the T-distribution</h2>
+
+<h3>Description</h3>
+
+<p>Plot the PDF of Test Statistic with the T-distribution
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+ttest.plot(md, deg, prng = c(-4, 4), side = "two", dig = 4, mt,
+  pvout = TRUE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>md</code></td>
+<td>
+<p>T-test statistic for the difference of population means</p>
+</td></tr>
+<tr valign="top"><td><code>deg</code></td>
+<td>
+<p>Degree of freedom</p>
+</td></tr>
+<tr valign="top"><td><code>prng</code></td>
+<td>
+<p>Range of x-axis, Default: c(-4, 4)</p>
+</td></tr>
+<tr valign="top"><td><code>side</code></td>
+<td>
+<p>Type of the alternative hypothesis, Default: 'two'</p>
+</td></tr>
+<tr valign="top"><td><code>dig</code></td>
+<td>
+<p>Number of digits below the decimal point, Default: 4</p>
+</td></tr>
+<tr valign="top"><td><code>mt</code></td>
+<td>
+<p>Plot title</p>
+</td></tr>
+<tr valign="top"><td><code>pvout</code></td>
+<td>
+<p>Print p-value? Default: TRUE</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>None.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+ttest.plot(1.96, deg=24)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>Rstat</em> version 0.0.0.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Joint PDF of Two Discrete Random variable</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for disc.joint2 {Rstat}"><tr><td>disc.joint2 {Rstat}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Joint PDF of Two Discrete Random variable</h2>
+
+<h3>Description</h3>
+
+<p>Joint Probability Distribution of Two Discrete Random variable
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+disc.joint2(X, Y, prt = TRUE, plot = FALSE, dig = 4, dig2 = 3, ep = 0)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>X</code></td>
+<td>
+<p>Sample space vector of the first random variable</p>
+</td></tr>
+<tr valign="top"><td><code>Y</code></td>
+<td>
+<p>Sample space vector of the second random variable</p>
+</td></tr>
+<tr valign="top"><td><code>prt</code></td>
+<td>
+<p>Print the joint frequency and probability? Default: TRUE</p>
+</td></tr>
+<tr valign="top"><td><code>plot</code></td>
+<td>
+<p>Plot the joint PDF? Default: FALSE</p>
+</td></tr>
+<tr valign="top"><td><code>dig</code></td>
+<td>
+<p>Number of digits below the decimal point in the console, Default: 4</p>
+</td></tr>
+<tr valign="top"><td><code>dig2</code></td>
+<td>
+<p>Number of digits below the decimal point in the graph, Default: 3</p>
+</td></tr>
+<tr valign="top"><td><code>ep</code></td>
+<td>
+<p>Minimum value for displaying the joint probability, Default: 0</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>Joint PDF
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+S = rolldie2(4)
+X = apply(S, 1, max)
+Y = apply(S, 1, min)
+disc.joint2(X, Y)
+library(scatterplot3d)
+disc.joint2(X, Y, prt=FALSE, plot=TRUE)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>Rstat</em> version 0.0.0.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

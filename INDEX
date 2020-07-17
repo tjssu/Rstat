@@ -1,0 +1,133 @@
+anova1                  One-way analysis of variance
+anova2                  Two-way analysis of variance
+bayes.plot              Prior and Posterior Probabilities
+bntest.plot             Exact Binomial Test
+bntest2.plot            Three Types of Binomial Tests
+cards2                  Sample Space of Sampling Cards
+ch10.man                Manual for Ch10. Functions
+ch11.man                Manual for Ch11. Functions
+ch12.man                Manual for Ch12. Functions
+ch13.man                Manual for Ch13. Functions
+ch14.man                Manual for Ch14. Functions
+ch15.man                Manual for Ch15. Functions
+ch2.man                 Chapter 2 Functions Manual
+ch3.man                 Ch3. Probability
+ch4.man                 Manual for Ch4. Functions
+ch5.man                 Manual for Ch5
+ch6.man                 Manual for Ch.6
+ch7.man                 Manual for Ch.7 Functions
+ch8.man                 Manual for Ch.8
+ch9.man                 Manual for Ch9. Functions
+chi.gof1                Goodness of Fit Test from a Table
+chi.gof2                Goodness of Fit Test for Poisson/Binomial
+chi.prob                Cumulative Probability of the Chi-square
+                        Distribution
+chi.quant               Quantile Plot of the Chi-square Distribution
+chi.sim                 Simulation for the chi-square Distribution
+chitest.plot            Plot the Chi-square Test
+chitest.plot2           Plot the Chi-square Test
+cimean.sim              Simulate the Confidence Interval for a Mean
+ciprob.sim              Simulate the Confidence Interval for a Ratio
+civar.sim               Simulate the Confidence Interval for a Variance
+civar2.sim              Simulate the Confidence Interval for a the
+                        ratio of Variances
+clt.plot                Diagnose the Central Limit Theorem
+cont.cdf                CDF of a Continuous Random Variable
+cont.cond2              Conditional PDF Plot of Two Continuous Random
+                        Variables
+cont.exp                Expected Values of Continuous Random Variables
+cont.ind2               Independence of Two Continuous Random Variables
+cont.jcdf               Joint CDF of Two Continuous Random Variables
+cont.jcdfp              Joint CDF Plot of Two Continuous Random
+                        Variables
+cont.jexp               Expected Value of Two Continuous Random
+                        Variables
+cont.marg2              Marginal PDF Plot of Two Continuous Random
+                        Variables
+cont.mpdf               PDF and CDF for Continuous Random Variables
+cont.spdf               Plot PDF of Continuous Random Variables
+cont.trans              Transformed PDF of a Continuous Random Variable
+corr.mplot              Multiple Scatter Plots
+corr.mreg               Multiple Regression Analysis
+corr.plot               Correlation Coefficients and Scatter Plots
+corr.plot6              Six Scatter Plots
+corr.reg1               Correlation & Simple Regression Analysis
+corr.spear              Pearson & Spearman Correlation Coefficient
+cprt                    Conditional Probability
+cross.test              Test of a Cross Table
+disc.cdf                CDF of a Discrete Random Variable
+disc.cond2              Conditional PDF of Discrete Random Variables
+disc.exp                Expected Value of a Discrete Random Variable
+disc.ind2               Independence of Two Discrete Random Variables
+disc.jexp               Expected Values of Two Discrete Random
+                        Variables
+disc.joint2             Joint PDF of Two Discrete Random variable
+disc.marg2              Marginal PDF of Two Discrete Random variables
+disc.mexp               Expected Values of Discrete Random Variables
+element                 Elements of an Event
+f.prob                  Cumulative Probability of the F-distribution
+f.quant                 Quantile Plot of the F-distribution
+fdist.sim               Simulation of the F-distribution
+fdist.sim2              Simulation for the F-distribution
+freq.table              Frequency Table
+friedman.plot           Friedman Test
+ftest.plot              Plot the PDF of the F-test Statistic
+hyp.sample              PDF of Successes from Finite Population
+indep.event             Independence of Random Variables
+intersect2              Intersection of Events
+kruswall.plot           Kruskal Wallis Test
+location.est            Estimation of Location
+mean2.ci                CI for the Difference of Two Means
+mean2test.plot          Hypothesis Test for the Difference of Two Means
+meanchar.plot           Operating Characteristic Curves of the Test for
+                        a Mean
+meanpower.plot          Power Function of the Test for a Mean
+meantest1.plot          Hypothesis Test for a Mean (known variance)
+meantest2.plot          Hypothesis Test for a Mean (unknown variance)
+mosaic2                 Mosaic Plot
+multinorm.plot          Multinomial PDF Plot
+norm.diag               Diagnosis of Normality
+norm.sim                Simulation for the Normal Distribution
+norm.spn                Minimum Number of Samples
+norm.trans              Standardization of the Normal Distribution
+normtest.plot           Plot the PDF of Test Statistic under the Normal
+                        Distribution
+pmean.ci                Confidence Interval for a Mean (known variance)
+pmean.ci2               Confidence Interval for the Mean (unknown
+                        variance)
+pprt                    Probability of an Event
+prob.ci                 Confidence Interval for a Population Ratio
+prob2.ci                Confidence Interval for the Difference of
+                        Ratios
+prob2test.plot          Test for the Difference of Ratios (Large
+                        Sample)
+ranksum.dist            Distribution of Wilcoxon Rank Sum
+ranksum.plot            Wilcoxon Rank Sum Test
+rolldie.sum             PDF of the Sum of n Dice
+rolldie2                Sample Space of Rolling Dice
+runs.dist               Distribution of Runs
+runstest.plot           Runs Test
+scat.lm                 Scatter Plot with a Regression Line
+setdiff2                Set Difference of Events
+signrank.dist           Distribution of Wilcoxon Signed Rank
+signrank.plot           Wilcoxon Signed Rank Test
+signtest.plot           Sign Test (Binomial Test)
+snorm.cdf               Plot Standard Normal Cumulative Probability
+snorm.prob              Central Probability of the Standard Normal
+                        Distribution
+snorm.quant             Quantile Plot of the Standard Normal
+                        Distribution
+spread.est              Spread Estimation
+strat.hist              Stratified Histograms
+tdist.sim               Simulation for the t-distribution
+tnorm.comp              Compare T-Dist. with the Standard Normal
+tosscoin2               Sample Space of Tossing Coins
+ttest.plot              Plot the PDF of Test Statistic with the
+                        T-distribution
+union2                  Union of Events
+unstable.hist           Unstable Histograms
+urnsample2              Sample Space of Urn Sampling
+var1.ci                 Confidence Interval for a Variance
+var1.test               Hypothesis Test for a Variance
+var2.ci                 CI for the Ratio of Two Population Variances
+var2.test               Hypothesis Test for Two Population Variances

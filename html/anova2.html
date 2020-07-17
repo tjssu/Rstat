@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Two-way analysis of variance</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for anova2 {Rstat}"><tr><td>anova2 {Rstat}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Two-way analysis of variance</h2>
+
+<h3>Description</h3>
+
+<p>Two-way analysis of variance
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+anova2(y, f1, f2, xl1, xl2, yl, step = 0:7, alp = 0.05, inter = TRUE,
+  maxim = TRUE, nb = 4, dig = 4)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>y</code></td>
+<td>
+<p>Response variable data</p>
+</td></tr>
+<tr valign="top"><td><code>f1</code></td>
+<td>
+<p>Levels of factor1 (same length as y)</p>
+</td></tr>
+<tr valign="top"><td><code>f2</code></td>
+<td>
+<p>Levels of factor2 (same length as y)</p>
+</td></tr>
+<tr valign="top"><td><code>xl1</code></td>
+<td>
+<p>Label of x-axis (default=name of f1)</p>
+</td></tr>
+<tr valign="top"><td><code>xl2</code></td>
+<td>
+<p>Legend label (default=name of f2)</p>
+</td></tr>
+<tr valign="top"><td><code>yl</code></td>
+<td>
+<p>Label of y-axis (default=name of y)</p>
+</td></tr>
+<tr valign="top"><td><code>step</code></td>
+<td>
+<p>Steps of the analysis of variance, Default: 0:7</p>
+</td></tr>
+<tr valign="top"><td><code>alp</code></td>
+<td>
+<p>Level of significance, Default: 0.05</p>
+</td></tr>
+<tr valign="top"><td><code>inter</code></td>
+<td>
+<p>Logical value for including interaction, Default: TRUE</p>
+</td></tr>
+<tr valign="top"><td><code>maxim</code></td>
+<td>
+<p>Logical value for maximization problem, Default: TRUE</p>
+</td></tr>
+<tr valign="top"><td><code>nb</code></td>
+<td>
+<p>Number of best level to be compared, Default: 4</p>
+</td></tr>
+<tr valign="top"><td><code>dig</code></td>
+<td>
+<p>Number of digits below the decimal point, Default: 4</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>None.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+Yield = c(76,79,81,79,83,85, 79,81,84,86,89,88, 87,91,91,94,88,86, 79,82,85,84,77,76)
+f1 = c(rep(100,6), rep(150,6), rep(200,6), rep(250,6))
+f2 = rep(c(1,1,2,2,3,3), 4)
+Temp = as.factor(f1)
+Press = as.factor(paste0(f2, "Psig"))
+anova2(Yield, Temp, Press)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>Rstat</em> version 0.0.0.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

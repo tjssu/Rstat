@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Distribution of Wilcoxon Signed Rank</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for signrank.dist {Rstat}"><tr><td>signrank.dist {Rstat}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Distribution of Wilcoxon Signed Rank</h2>
+
+<h3>Description</h3>
+
+<p>Distribution of Wilcoxon Signed Rank Test Statistic
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+signrank.dist(nv = 5:50, av, tab = TRUE, plot = FALSE, dig = 4)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>nv</code></td>
+<td>
+<p>Number of signed data, Default: 5:50</p>
+</td></tr>
+<tr valign="top"><td><code>av</code></td>
+<td>
+<p>Probability vector (default=c(0.005, 0.01, 0.025, 0.05, 0.95, 0.975, 0.99, 0.995))</p>
+</td></tr>
+<tr valign="top"><td><code>tab</code></td>
+<td>
+<p>Print quantile table? Default: TRUE</p>
+</td></tr>
+<tr valign="top"><td><code>plot</code></td>
+<td>
+<p>Plot test statistic distribution? Default: FALSE</p>
+</td></tr>
+<tr valign="top"><td><code>dig</code></td>
+<td>
+<p>Number of digits below the decimal point, Default: 4</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>None.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+signrank.dist(nv=5:15)
+signrank.dist(nv=c(5,7,10,20), tab=FALSE, plot=TRUE)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>Rstat</em> version 0.0.0.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

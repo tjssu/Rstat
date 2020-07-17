@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Correlation Coefficients and Scatter Plots</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for corr.plot {Rstat}"><tr><td>corr.plot {Rstat}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Correlation Coefficients and Scatter Plots</h2>
+
+<h3>Description</h3>
+
+<p>Correlation Coefficients and Scatter Plots of Discrete Random variables
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+corr.plot(X, Mt, item, dig = 4, prt = TRUE, pprt = FALSE, plot = FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>X</code></td>
+<td>
+<p>Sample space vector of X</p>
+</td></tr>
+<tr valign="top"><td><code>Mt</code></td>
+<td>
+<p>Plot title</p>
+</td></tr>
+<tr valign="top"><td><code>item</code></td>
+<td>
+<p>Names of random variables</p>
+</td></tr>
+<tr valign="top"><td><code>dig</code></td>
+<td>
+<p>Number of effective digits, Default: 5</p>
+</td></tr>
+<tr valign="top"><td><code>prt</code></td>
+<td>
+<p>Print the result? Default: TRUE</p>
+</td></tr>
+<tr valign="top"><td><code>pprt</code></td>
+<td>
+<p>Print frequency tables? Default: FALSE</p>
+</td></tr>
+<tr valign="top"><td><code>plot</code></td>
+<td>
+<p>Plot the PDF and scatter plots? Default: FALSE</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>None.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+S = rolldie2(4)
+item = c("Sum", "Max", "Min", "Range")
+X = list()
+X[[1]] = apply(S, 1, sum)
+X[[2]] = apply(S, 1, max)
+X[[3]] = apply(S, 1, min)
+X[[4]] = X[[2]]-X[[3]]
+Mt = paste("PDF of", item, "in 4 Dice")
+corr.plot(X, Mt, item, pprt=T, plot=T)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>Rstat</em> version 0.0.0.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

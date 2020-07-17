@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Expected Value of Two Continuous Random Variables</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for cont.jexp {Rstat}"><tr><td>cont.jexp {Rstat}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Expected Value of Two Continuous Random Variables</h2>
+
+<h3>Description</h3>
+
+<p>Joint pdf and Expected Value of Two Continuous Random Variables
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+cont.jexp(FUN, lo1 = -Inf, up1 = Inf, lo2 = -Inf, up2 = Inf, dig = 4,
+  prt = "exp")
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>FUN</code></td>
+<td>
+<p>Continuous joint probability density function</p>
+</td></tr>
+<tr valign="top"><td><code>lo1</code></td>
+<td>
+<p>Lower limit of X, Default: -Inf</p>
+</td></tr>
+<tr valign="top"><td><code>up1</code></td>
+<td>
+<p>Upper limit of X, Default: Inf</p>
+</td></tr>
+<tr valign="top"><td><code>lo2</code></td>
+<td>
+<p>Lower limit of Y, Default: -Inf</p>
+</td></tr>
+<tr valign="top"><td><code>up2</code></td>
+<td>
+<p>Upper limit of Y, Default: Inf</p>
+</td></tr>
+<tr valign="top"><td><code>dig</code></td>
+<td>
+<p>Number of digits below the decimal point, Default: 4</p>
+</td></tr>
+<tr valign="top"><td><code>prt</code></td>
+<td>
+<p>Option for detailed output in c(&quot;&quot;, &quot;exp&quot;, &quot;cov&quot;, &quot;cor&quot;), Default: &rdquo;</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>list(Ex=E(X), Dx=D(X), Ey=E(Y), Dy=D(Y), Vxy=Cov(X,Y), Cxy=Corr(X,Y))
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+pdf = function(x, y) 0.5*(x+3*y)*(x&gt;0 &amp; x&lt;1)*(y&gt;0 &amp; y&lt;1)
+cont.jexp(pdf, prt="cor")
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>Rstat</em> version 0.0.0.1 <a href="00Index.html">Index</a>]</div>
+</body></html>
