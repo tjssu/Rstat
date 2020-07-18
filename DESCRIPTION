@@ -7,5 +7,3 @@ Depends: R (>= 3.4.4)
 License: MIT
 LazyData: true
 RoxygenNote: 6.0.1
-Author: T.J. Lim [aut, cre]
-Maintainer: T.J. Lim <tjlim@ssu.ac.kr>
