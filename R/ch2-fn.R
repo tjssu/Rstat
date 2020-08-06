@@ -441,12 +441,143 @@ spread.est = function(x, detail=FALSE) {
 	cat("Variance=", xvar, "\t Stand. Dev.=", xsd, 
 		"\nRange=", xrng, "\t IQR=", xiqr, "\t CoV=", xcv, "\n")
 	}
-	if (detail==TRUE) {
+	if (detail==TRUE) { # [Correction]
 	cat("Calculation in Detail -----------------------------------------------------",
-	"\n(1) Variance =", paste0(sum(x^2)," - ", sum(x), "^2 / ", n), "=", xvar, 
-	"\n(2) Stand. Dev. =", paste0("sqrt(", round(xvar, 7), ") ="), xsd, 
-	"\n(3) Range =", max(x), "-", min(x), "=", xrng, 
-	"\n(4) IQR =", quantile(x, 0.75), "-", quantile(x, 0.25), "=", xiqr, 
-	"\n(5) CoV =", xsd, "/", mean(x), "=", xcv, "\n")
+	"\n(1) Variance =", paste0("(", round(sum(x^2),dig)," - ", round(abs(sum(x)),dig),
+		"\U00B2/", n, ") /", n-1), "=", round(xvar,dig),
+	"\n(2) Stand. Dev. =", paste0("\U221A(", round(xvar,dig), ") ="), round(xsd,dig),
+	"\n(3) Range =", round(max(x),dig), "-", paste0("(",round(min(x),dig),")"),
+		"=", round(xrng,dig),
+	"\n(4) IQR =", round(quantile(x, 0.75),dig), "-",
+		paste0("(",round(quantile(x, 0.25),dig),")"), "=", round(xiqr,dig),
+	"\n(5) CoV =", round(xsd,dig), "/", paste0("(",round(mean(x),dig),")"),
+		"=", round(xcv,dig), "\n")
+	}
+}
+# [Correction]
+# [2-A1] Draw Multiple Histograms from a Data Frame
+
+#' Multiple Histograms
+#'
+#' To draw multiple histograms from a data frame.
+#' @param df Data frame of input data.
+#' @param br Break method Default: Sturges.
+#' @param mt Vector of main titles.
+#' @param xl Vector of x labels.
+#' @param vcol Vector of colors for the histograms.
+#' @param ... Other graphic parameters.
+#' @return None.
+#' @keywords Ch2. Descriptive Statistics
+#' @examples
+#' mult.hist(iris[1:4])
+#' mult.hist(iris[1:4], vcol=rainbow(4))
+#' mult.hist(mtcars[1:7], vcol=rainbow(7))
+#' @export
+mult.hist = function(df, br, mt, xl, vcol, ...) {
+    # making histograms
+	if (missing(df)) stop("Please input a data frame with numeric data.")
+	if (!is.list(df)) stop("Please input a LIST with numeric data.")
+	ng = length(df)
+	if (ng>16) stop("The number of groups must br at most 16.")
+	if (missing(br)) {mybr=rep("Sturges", ng)
+	} else { mybr=br }
+
+	if (missing(mt)) {mymt=paste("Histogram of", names(df))
+	} else { mymt=mt }
+
+	if (missing(xl)) {myxl=names(df)
+	} else { myxl=xl }
+
+	if (missing(vcol)) {mycol=rep(NULL,ng)
+	} else { mycol=vcol }
+
+	wc=c(1,2,3,2,3, 3,4,4,3,4, 4,4,4,4,4, 4,5,5,5,5)
+	wr=c(1,1,1,2,2, 2,2,2,3,3, 3,3,4,4,4, 4,4,4,4,4)
+	ww=c(4,6,9,7,9, 9,9,9,9,11, 11,11,11,11,11, 11,13,13,13,13)
+	wl=c(3,3,3,6,6, 6,6,6,9,9, 9,9,11,11,11, 11,11,11,11,11)
+	win.graph(ww[ng], wl[ng])
+	par(mfrow=c(wr[ng], wc[ng]))
+
+	for (k in 1:ng) hist(df[[k]], breaks=mybr[k], main=mymt[k], xlab=myxl[k], col=mycol[k])
+}
+
+# [2-A2] Draw Stratified Histograms from a Data Frame
+
+#' Stratified Histograms
+#'
+#' To draw stratified histograms from a data frame.
+#' @param df Data frame of input data.
+#' @param cdep The column of the dependent variable.
+#' @param cfac The column of the stratifying factor.
+#' @param spec Vector of x labels.
+#' @param br Break method Default: Sturges.
+#' @param vc Vector of colors for the histograms.
+#' @param prob Logical value for selecting density instead of frequency Default: FALSE.
+#' @return None.
+#' @keywords Ch2. Descriptive Statistics
+#' @examples
+#' strat.hist2(iris, 1, 5)
+#'
+#' for (k in 1:4) strat.hist2(iris, k, 5)
+#' @export
+strat.hist2 = function(df, cdep, cfac, spec, br, vc, prob=FALSE) {
+	if (missing(df)) stop("Please input a data frame with numeric data.")
+	if (missing(cdep)) stop("Please input the column of the dependent variable.")
+	if (missing(cfac)) stop("Please input the column of the factor.")
+          # Assign variables
+	x = df[[cdep]]
+	n = length(x)
+	fac = df[[cfac]]
+	if (!is.factor(fac)) fac = as.factor(fac)
+          # Number of Groups
+	gname = levels(fac)
+	ng = length(gname)
+	if (ng>8) stop("The number of groups must be 8 or less.")
+          # Breaks for the histogram
+	if (missing(br)) {mybr=rep("Sturges", ng)
+	} else { mybr=br }
+          # adjusting graphic parameters
+	wc= c(2,2,2, 3,3, 3,3,3)
+	wr= c(1,2,2, 2,2, 3,3,3)
+	ww=c(7,7,7, 9,9, 9,9,9)
+	wl= c(3,6,6, 6,6, 9,9,9)
+
+         # set up parameters
+	if (missing(vc)) vc = c("orange", rep("cyan", ng))
+	nb1 = ceiling(sqrt(n))
+	xl = range(x)
+	if (!missing(spec)) xl = c(min(xl[1],spec[1]), max(xl[2],spec[2]))
+	rng = xl[2]-xl[1]
+	xl = xl + 0.05*rng*c(-1, 1)
+
+	win.graph(ww[ng], wl[ng])
+	par(mfrow=c(wr[ng], wc[ng]))
+	par(mar=c(3,3,4,1))
+
+         # modify
+	xh = hist(x, breaks=nb1, plot=F)
+	brk = xh$breaks
+	if (prob) {
+	    ymg = vector()
+	    for (k in 1:ng) ymg[k] = max(hist(x[fac==gname[k]], breaks=brk, plot=F)$density)
+	    ymax = max(ymg)
+	} else {
+	ymax = max(xh$counts)
+	}
+
+         # making the main histogram
+	hist(x, breaks=nb1, main=names(df)[cdep], probability=prob,
+		ylab="", xlab="", xlim=xl, col=vc[1])
+	if (!missing(spec)) {
+		segments(spec, 0, spec, ymax/2, lwd=2, col=2)
+		text(spec, c(ymax/2,ymax/2), c("SL", "SU"), col=2, pos=3)
+	}
+
+         # making stratified histograms
+	for (k in 1:ng) {hist(x[fac==gname[k]], breaks=brk, main=gname[k], probability=prob,
+		ylab="", xlab="", ylim=c(0, ymax), xlim=xl, col=vc[k+1])
+		if (!missing(spec)) {
+		  segments(spec, 0, spec, ymax/2, lwd=2, col=2)
+		  text(spec, c(ymax, ymax)/2, c("SL", "SU"), col=2, pos=3) }
 	}
 }
