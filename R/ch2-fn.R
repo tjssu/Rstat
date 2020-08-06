@@ -372,7 +372,9 @@ scat.lm = function(x, y, mt, xl, yl, w=c(7, 5), ...) {
 #' @examples 
 #' location.est(mtcars$mpg, detail=T)
 #' @export 
-location.est = function(x, tr=0.1, detail=FALSE) {
+location.est = function(x, tr=0.1, detail=FALSE, dig=7) {
+    # [Correction]
+     rdd = function(x) round(x, dig)
 	n = length(x)
     # mean --> mean( ) function
 	xmean = mean(x)
@@ -400,14 +402,15 @@ location.est = function(x, tr=0.1, detail=FALSE) {
 	nt = floor(n*tr)
 	sumt = sum(sort(x)[(nt+1):(n-nt)])
 	n2 = n - 2*nt
+	# [Correction]
 	cat("Calculation in Detail -----------------------------------------------------",
-		"\n(1) Mean =", paste0(sum(x), "/", n), "=", xmean, 
-		"\n(2) Median =", paste0("x(", (n+1)/2, ") ="), xmed, 
-		"\n(3) Mode =", xmode, paste0("(", max(tabx), "times)"),
-		"\n(4) Geom. Mean =", paste0(format(prod(x), digits=7, scientific=T), 
-				"^(1/", n, ") ="), gmean, 
-		"\n(5) Harm. Mean =", paste0("1/", format(mean(1/x), digits=7), " ="), hmean, 
-		paste0("\n(6) Trim. Mean(",tr,") = ", sumt, "/", n2), "=", tmean, "\n")
+		"\n(1) Mean =", paste0(rdd(sum(x)), "/", n), "=", rdd(xmean),
+		"\n(2) Median =", paste0("x(", (n+1)/2, ") ="), rdd(xmed),
+		"\n(3) Mode =", xmode, paste0("(", max(tabx), " times)"),
+		"\n(4) Geom. Mean =", paste0("(",format(prod(x), F,dig),
+				")^(1/", n, ") ="), rdd(gmean),
+		"\n(5) Harm. Mean =", paste0("1/(", rdd(mean(1/x)), ") ="), rdd(hmean),
+		paste0("\n(6) Trim. Mean(",tr,") = ", rdd(sumt), "/", n2), "=", rdd(tmean), "\n")
 	}
 }
 
@@ -423,7 +426,7 @@ location.est = function(x, tr=0.1, detail=FALSE) {
 #' @examples 
 #' spread.est(mtcars$mpg, detail=T)
 #' @export 
-spread.est = function(x, detail=FALSE) {
+spread.est = function(x, detail=FALSE, dig=7) {
 	if (is.matrix(x)) x = as.vector(x)
 	n = length(x)
     # sample variance --> var( ) function
